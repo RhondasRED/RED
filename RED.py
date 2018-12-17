@@ -18,11 +18,13 @@ from tkinter import filedialog
 class RED:
     #initiate the input parameter window
     def __init__(self, window):
-
+        print("Welcome to RED")
+        print("Please enter your data into the input parameter window")
+        print("When you are ready click on the 'Calculate' button")
         #design of input parameter window
         self.window = window
         self.window.title("Input Parameters")
-        #self.window.iconbitmap("C:/Users/Owner/Downloads/RED-master/RED-master/REDlogo.png") #import RED logo, change to users location
+        #self.window.iconbitmap("C:/Users/Owner/Downloads/RED-master/RED-master/REDlogo.png") #import RED logo
         # self.window["bg"]="red" #change input window background colour, default grey
 
         #initialisation of inputs
@@ -127,7 +129,7 @@ class RED:
             self.label5.grid(row=7, sticky=E)
             self.label5.configure(text=self.filename2)
         else:
-            print("no dose file 2")
+            print("To add a second dose file please make sure the Plan1 box = 2")
 
     def fileDialog3(self):
         plan1files = float(self.box5.get())
@@ -138,7 +140,7 @@ class RED:
             self.label6.grid(row=8, sticky=E)
             self.label6.configure(text=self.filename3)
         else:
-            print("no dose file 3")
+            print("To add a third dose file please make sure the Plan1 box = 3")
 
     def fileDialog4(self):
         plan1files = float(self.box5.get())
@@ -149,7 +151,7 @@ class RED:
             self.label7.grid(row=9, sticky=E)
             self.label7.configure(text=self.filename4)
         else:
-            print("no dose file 4")
+            print("To add a fourth dose file please make sure the Plan1 box = 4")
 
     def fileDialog5(self):  # structure file
         self.filename5 = filedialog.askopenfilename(initialdir="/", title="Select A File",
@@ -174,7 +176,7 @@ class RED:
             self.label16.grid(row=12, sticky=E)
             self.label16.configure(text=self.filename7)
         else:
-            print("no dose file 2")
+            print("To add a second dose file please make sure the Plan2 box = 2")
 
     def fileDialog8(self):
         plan2files = float(self.box6.get())
@@ -185,7 +187,7 @@ class RED:
             self.label17.grid(row=13, sticky=E)
             self.label17.configure(text=self.filename8)
         else:
-            print("no dose file 3")
+            print("To add a third dose file please make sure the Plan2 box = 3")
 
     def fileDialog9(self):
         plan2files = float(self.box6.get())
@@ -196,7 +198,7 @@ class RED:
             self.label18.grid(row=14, sticky=E)
             self.label18.configure(text=self.filename9)
         else:
-            print("no dose file 4")
+            print("To add a fourth dose file please make sure the Plan2 box = 4")
 
     #plotting of EQD2 recalculated plan 1 and 2 individually
     def plot(self):
@@ -252,6 +254,8 @@ class RED:
         calcdvhs7 = {}
         calcdvhs8 = {}
 
+        print("RED is calculating your EQD2 DVH....")
+        print("Please wait, this could take a few moments")
         #iterate through dose file 1 to find correct stucture data
         for key, structure in RTstructures1.items():
             calcdvhs1[key] = dvhcalc.get_dvh(rtssfile1, rtdosefile1, key)
