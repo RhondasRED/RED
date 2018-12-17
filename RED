@@ -22,7 +22,7 @@ class RED:
         #design of input parameter window
         self.window = window
         self.window.title("Input Parameters")
-        self.window.iconbitmap("C:/Users/Owner/Downloads/RED-master/RED-master/REDlogo.png") #import RED logo
+        #self.window.iconbitmap("C:/Users/Owner/Downloads/RED-master/RED-master/REDlogo.png") #import RED logo, change to users location
         # self.window["bg"]="red" #change input window background colour, default grey
 
         #initialisation of inputs
