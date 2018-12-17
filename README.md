@@ -5,10 +5,10 @@ Required input includes dose per fraction, α/β for specific tissue types and D
 The dose distribution matrix is converted into an EQD2 dose matrix and plotted against structure volume data to create a summed EQD2 DVH.
 
 Requirements:
-dicompylercore
-numpy
-matplotlib
-mpldatacursor
+dicompylercore,
+numpy,
+matplotlib,
+mpldatacursor,
 tkinter
 
 
