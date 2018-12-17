@@ -206,7 +206,7 @@ class RED:
         plan2files = float(self.box6.get())
         self.newWindow = Toplevel(self.window) #initiate new window for summed DVH
         self.newWindow.title("Recalculated DVH")
-        self.newWindow.iconbitmap("C:/Users/Owner/Documents/Rlogo2.ico")
+        #self.newWindow.iconbitmap("C:/Users/Owner/Documents/Rlogo2.ico")
 
         rtssfile1 = self.filename5 #structure file
         RTss1 = dicomparser.DicomParser(rtssfile1) #read through structure file
